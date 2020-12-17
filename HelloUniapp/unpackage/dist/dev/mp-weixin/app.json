@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/list/list",
     "pages/message/message",
     "pages/index/index",
     "pages/contact/contact",
@@ -15,5 +16,6 @@
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "light"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap54.json"
 }
