@@ -1,13 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/list/list",
-			"style": {
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 200
-			}
-		},
-		{
 			"path": "pages/message/message",
 			"style": {
 				"navigationBarTitleText":"信息页",
@@ -17,6 +10,16 @@
 						"color": "#7D26CD"
 					}
 				}
+			}
+		},
+		{
+			"path": "pages/navigator/navigator"
+		},
+		{
+			"path": "pages/list/list",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
 			}
 		},
 		{
@@ -44,18 +47,7 @@
 		"backgroundTextStyle": "light"
 	},
 	
-	"condition" : { //模式配置，仅开发期间生效
-		"current": 0, //当前激活的模式(list 的索引项)
-		"list": [
-			{
-				"name": "", //模式名称
-				"path": "", //启动页面，必选
-				"query": "" //启动参数，在页面的onLoad函数里面得到
-			}
-		]
-	},
-	
-	"tabsBar": {
+	"tabBar": {
 		"color": "#666",
 		"selectedColor": "#007AFF",
 		"list": [
@@ -72,7 +64,7 @@
 				"selectedIconPath": "static/tabs/message-active.png"
 			},
 			{
-				"text": "我们",
+				"text": "我的",
 				"pagePath": "pages/contact/contact",
 				"iconPath": "static/tabs/contact.png",
 				"selectedIconPath": "static/tabs/contact-active.png"

@@ -1,0 +1,1 @@
+<view>{{''+num+"\n\t"+title+''}}</view>

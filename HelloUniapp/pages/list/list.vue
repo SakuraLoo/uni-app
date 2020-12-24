@@ -2,7 +2,7 @@
 	<view>
 		<button @click="GetAjax">发送get请求</button>
 		<button type="primary" @click="SetStoragy">存储数据</button>
-		<button type="warn" @click="GetStoragy">获取数据</button>
+		<button @click="GetStoragy">获取数据</button>
 		<button type="primary" @click="RemoveStoragy">移除id</button>
 		<view>这是列表页</view>
 		<view class="box-item" v-for="item in list">
@@ -42,21 +42,24 @@
 				})
 			},
 			SetStoragy() {
-				uni.setStorage({
-					key: "id",
-					data: 80,
-					success() {
-						console.log("存储成功")
-					}
-				})
+				// uni.setStorage({
+				// 	key: "id",
+				// 	data: 80,
+				// 	success() {
+				// 		console.log("存储成功")
+				// 	}
+				// })
+				uni.setStorageSync("id",100);
 			},
 			GetStoragy() {
-				uni.getStorage({
-					key: "id",
-					success(res) {
-						console.log(res)
-					}
-				})
+				// uni.getStorage({
+				// 	key: "id",
+				// 	success(res) {
+				// 		console.log(res)
+				// 	}
+				// })
+				const res = uni.getStorageSync("id");
+				console.log(res)
 			},
 			RemoveStoragy() {
 				uni.removeStorage({
